@@ -58,5 +58,9 @@ krystoCoins.addBlock(new Block(2, "12/07/2022", {amount : 24}))
 
 
 console.log(' Is blockchain valid? ' + krystoCoins.isChainValid());
+krystoCoins.chain[1].data = {amount: 100};
+krystoCoins.chain[1].hash= krystoCoins.chain[1].calculateHash()
+
+console.log(' Is blockchain valid? ' + krystoCoins.isChainValid());
 
 //console.log(JSON.stringify(krystoCoins, null, 4));
